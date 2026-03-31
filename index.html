@@ -145,27 +145,13 @@ nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-cont
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
 @keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 .fade-in{animation:fadeUp .4s ease forwards}
-@media(max-width:768px){
-  nav{padding:16px 20px}
-  .q-wrap{grid-template-columns:1fr}
-  .q-left{display:none}
-  .q-right{padding:24px 20px;justify-content:flex-start}
-  .report-wrap{padding:28px 16px 60px}
-  .icp-grid,.score-cards{grid-template-columns:1fr 1fr}
-  .maturity-stages{grid-template-columns:repeat(3,1fr)}
-  .cta-details{gap:14px}
-  .lp-areas{grid-template-columns:1fr}
-  .lp-hero{padding:48px 24px 40px}
-}
+@media(max-width:768px){nav{padding:16px 20px}.q-wrap{grid-template-columns:1fr}.q-left{display:none}.q-right{padding:24px 20px;justify-content:flex-start}.report-wrap{padding:28px 16px 60px}.icp-grid,.score-cards{grid-template-columns:1fr 1fr}.maturity-stages{grid-template-columns:repeat(3,1fr)}.cta-details{gap:14px}.lp-areas{grid-template-columns:1fr}.lp-hero{padding:48px 24px 40px}}
 </style>
 </head>
 <body>
 
-<!-- ENTRY SCREEN -->
 <div id="screen-entry" class="screen active">
-  <nav>
-    <a href="https://venturescale.co.uk" class="nav-logo">Venture<span>Scale</span></a>
-  </nav>
+  <nav><a href="https://venturescale.co.uk" class="nav-logo">Venture<span>Scale</span></a></nav>
   <div class="lp-hero">
     <div class="lp-eyebrow">Free - Instant Download</div>
     <h1 class="entry-title">Is your commercial operation<br>built to <em>scale?</em></h1>
@@ -177,44 +163,22 @@ nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-cont
     </div>
   </div>
   <div class="lp-areas">
-    <div class="lp-area">
-      <div class="lp-area-num">Area 01</div>
-      <div class="lp-area-name">Commercial Foundation</div>
-      <div class="lp-area-desc">Processes, ICP definition and knowledge infrastructure</div>
-    </div>
-    <div class="lp-area">
-      <div class="lp-area-num">Area 02</div>
-      <div class="lp-area-name">Systems & Data</div>
-      <div class="lp-area-desc">CRM setup, data quality and board-ready reporting</div>
-    </div>
-    <div class="lp-area">
-      <div class="lp-area-num">Area 03</div>
-      <div class="lp-area-name">Automation & AI Readiness</div>
-      <div class="lp-area-desc">Manual operations, tech stack and AI readiness</div>
-    </div>
+    <div class="lp-area"><div class="lp-area-num">Area 01</div><div class="lp-area-name">Commercial Foundation</div><div class="lp-area-desc">Processes, ICP definition and knowledge infrastructure</div></div>
+    <div class="lp-area"><div class="lp-area-num">Area 02</div><div class="lp-area-name">Systems & Data</div><div class="lp-area-desc">CRM setup, data quality and board-ready reporting</div></div>
+    <div class="lp-area"><div class="lp-area-num">Area 03</div><div class="lp-area-name">Automation & AI Readiness</div><div class="lp-area-desc">Manual operations, tech stack and AI readiness</div></div>
   </div>
   <div class="lp-divider"></div>
   <div class="lp-form-wrap">
     <div class="entry-form">
-      <div class="fl">
-        <label>Work email</label>
-        <input type="email" class="fi" id="entry-email" placeholder="you@company.com" />
-      </div>
-      <div class="fl">
-        <label>Company website</label>
-        <input type="url" class="fi" id="entry-url" placeholder="https://yourcompany.com" />
-      </div>
+      <div class="fl"><label>Work email</label><input type="email" class="fi" id="entry-email" placeholder="you@company.com" /></div>
+      <div class="fl"><label>Company website</label><input type="url" class="fi" id="entry-url" placeholder="https://yourcompany.com" /></div>
       <button class="btn-go" onclick="startReport()">Generate my Commercial Infrastructure Assessment →</button>
     </div>
   </div>
 </div>
 
-<!-- QUESTIONS SCREEN -->
 <div id="screen-questions" class="screen">
-  <nav>
-    <a href="https://venturescale.co.uk" class="nav-logo">Venture<span>Scale</span></a>
-    <span class="nav-tag">Generating your assessment...</span>
-  </nav>
+  <nav><a href="https://venturescale.co.uk" class="nav-logo">Venture<span>Scale</span></a><span class="nav-tag">Generating your assessment...</span></nav>
   <div class="q-wrap">
     <div class="q-left">
       <div class="spinner"></div>
@@ -270,9 +234,7 @@ nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-cont
             <div class="opt" onclick="selectOpt(this,'q3',4)"><div class="opt-radio"></div><div class="opt-txt">Fully documented knowledge base - any team member can handle any conversation confidently</div></div>
           </div>
         </div>
-        <div class="q-footer">
-          <button class="btn-next" id="btn-next1" disabled onclick="nextArea(1)">Next: Systems & Data →</button>
-        </div>
+        <div class="q-footer"><button class="btn-next" id="btn-next1" disabled onclick="nextArea(1)">Next: Systems & Data →</button></div>
       </div>
       <div id="area2" style="display:none">
         <div class="area-tag">Area 2 of 3</div>
@@ -304,9 +266,7 @@ nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-cont
             <div class="opt" onclick="selectOpt(this,'q6',4)"><div class="opt-radio"></div><div class="opt-txt">Our forecast is consistently reliable and we can explain variances clearly</div></div>
           </div>
         </div>
-        <div class="q-footer">
-          <button class="btn-next" id="btn-next2" disabled onclick="nextArea(2)">Next: Automation & AI →</button>
-        </div>
+        <div class="q-footer"><button class="btn-next" id="btn-next2" disabled onclick="nextArea(2)">Next: Automation & AI →</button></div>
       </div>
       <div id="area3" style="display:none">
         <div class="area-tag">Area 3 of 3 - Final section</div>
@@ -338,20 +298,14 @@ nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-cont
             <div class="opt" onclick="selectOpt(this,'q9',4)"><div class="opt-radio"></div><div class="opt-txt">Comprehensive - we capture the right data consistently and it's structured for reporting and analysis</div></div>
           </div>
         </div>
-        <div class="q-footer">
-          <button class="btn-next" id="btn-next3" disabled onclick="submitAnswers()">Generate my assessment →</button>
-        </div>
+        <div class="q-footer"><button class="btn-next" id="btn-next3" disabled onclick="submitAnswers()">Generate my assessment →</button></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- REPORT SCREEN -->
 <div id="screen-report" class="screen">
-  <nav>
-    <a href="https://venturescale.co.uk" class="nav-logo">Venture<span>Scale</span></a>
-    <span class="nav-tag">The Commercial Infrastructure Assessment</span>
-  </nav>
+  <nav><a href="https://venturescale.co.uk" class="nav-logo">Venture<span>Scale</span></a><span class="nav-tag">The Commercial Infrastructure Assessment</span></nav>
   <div class="report-wrap" id="reportWrap">
     <div class="rpt-header">
       <div class="rpt-eyebrow">VentureScale - Confidential</div>
@@ -362,18 +316,9 @@ nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-cont
       <p>The Commercial Infrastructure Assessment assesses your commercial operation across three critical areas - Commercial Foundation, Systems & Data Infrastructure, and Automation & AI Readiness - giving you a clear picture of where your business stands and what needs to change to build a scalable and repeatable sales engine.</p>
       <p>Use this report to identify where your commercial infrastructure is strong, where the gaps are, and what to prioritise first. The findings are designed to be shared with your leadership team, used to inform your commercial roadmap, or presented to investors as evidence of commercial self-awareness and strategic clarity.</p>
     </div>
-    <div class="rsec">
-      <div class="rsec-tag">01 - Company overview</div>
-      <div class="rsec-body" id="rpt-overview"></div>
-    </div>
-    <div class="rsec">
-      <div class="rsec-tag">02 - ICP profile</div>
-      <div class="icp-grid" id="rpt-icp"></div>
-    </div>
-    <div class="rsec">
-      <div class="rsec-tag">03 - The critical transition</div>
-      <div class="rsec-body" id="rpt-transition"></div>
-    </div>
+    <div class="rsec"><div class="rsec-tag">01 - Company overview</div><div class="rsec-body" id="rpt-overview"></div></div>
+    <div class="rsec"><div class="rsec-tag">02 - ICP profile</div><div class="icp-grid" id="rpt-icp"></div></div>
+    <div class="rsec"><div class="rsec-tag">03 - The critical transition</div><div class="rsec-body" id="rpt-transition"></div></div>
     <div class="rsec">
       <div class="rsec-tag">04 - Commercial infrastructure maturity</div>
       <div class="maturity-stages" id="rpt-maturity"></div>
@@ -382,23 +327,11 @@ nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-cont
     <div class="rsec">
       <div class="rsec-tag">05 - Scorecard</div>
       <div class="score-cards" id="rpt-scores"></div>
-      <div class="total-score">
-        <span class="total-lbl">Overall commercial infrastructure score</span>
-        <span class="total-val" id="rpt-total">- / 30</span>
-      </div>
+      <div class="total-score"><span class="total-lbl">Overall commercial infrastructure score</span><span class="total-val" id="rpt-total">- / 30</span></div>
     </div>
-    <div class="rsec">
-      <div class="rsec-tag">06 - Area analysis</div>
-      <div id="rpt-analyses"></div>
-    </div>
-    <div class="rsec">
-      <div class="rsec-tag">07 - Key takeaways</div>
-      <div class="takeaways"><p id="rpt-takeaways"></p></div>
-    </div>
-    <div class="dl-bar">
-      <p>Save or share your assessment</p>
-      <button class="btn-dl" onclick="downloadReport()">Download as PDF</button>
-    </div>
+    <div class="rsec"><div class="rsec-tag">06 - Area analysis</div><div id="rpt-analyses"></div></div>
+    <div class="rsec"><div class="rsec-tag">07 - Key takeaways</div><div class="takeaways"><p id="rpt-takeaways"></p></div></div>
+    <div class="dl-bar"><p>Save or share your assessment</p><button class="btn-dl" onclick="downloadReport()">Download as PDF</button></div>
     <div class="cta-block">
       <div class="cta-title">You've seen the picture. The next step is building it.</div>
       <p class="cta-sub">The Commercial Infrastructure Audit goes inside your business and produces a detailed findings report with a prioritised plan to fix what this assessment has identified.</p>
@@ -410,7 +343,7 @@ nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-cont
     </div>
     <div class="report-footer">
       <p>This assessment was created by VentureScale. We design and build the systems, processes and data architecture that growth-stage businesses need to scale.</p>
-      <p>To discuss your results or take the next step, contact Germain Marquesini at <a href="mailto:germain@venturescaleconsultancy.com">germain@venturescaleconsultancy.com</a> or visit <a href="https://venturescale.co.uk">venturescale.co.uk</a></p>
+      <p>Contact Germain Marquesini at <a href="mailto:germain@venturescaleconsultancy.com">germain@venturescaleconsultancy.com</a> or visit <a href="https://venturescale.co.uk">venturescale.co.uk</a></p>
     </div>
   </div>
 </div>
@@ -420,7 +353,7 @@ const answers={};
 const scores={q1:0,q2:0,q3:0,q4:0,q5:0,q6:0,q7:0,q8:0,q9:0};
 
 function stripCiteTags(text){
-  if(!text) return '';
+  if(!text)return '';
   return text.replace(/<cite[^>]*>|<\/cite>/gi,'').replace(/&lt;cite[^&]*&gt;|&lt;\/cite&gt;/gi,'').trim();
 }
 
@@ -477,18 +410,15 @@ function nextArea(area){
 async function submitAnswers(){
   const btn=document.getElementById('btn-next3');
   btn.disabled=true;
-  btn.textContent='Generating your assessment...';
-  btn.style.opacity='0.7';
-
+  btn.innerHTML='<span style="display:inline-flex;align-items:center;gap:8px"><span style="width:14px;height:14px;border:2px solid rgba(10,22,40,0.3);border-top-color:#0a1628;border-radius:50%;animation:spin .7s linear infinite;flex-shrink:0"></span>Generating your assessment...</span>';
+  btn.style.opacity='0.8';
   document.getElementById('prog-fill').style.width='100%';
   document.getElementById('prog-pct').textContent='100%';
   document.getElementById('pa3').classList.remove('active');
   document.getElementById('pa3').classList.add('done');
-
   answers.score1=scores.q1+scores.q2+scores.q3;
   answers.score2=scores.q4+scores.q5+scores.q6;
   answers.score3=scores.q7+scores.q8+scores.q9;
-
   try{
     const res=await fetch('/api/generate-report',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({answers})});
     const data=await res.json();
@@ -502,31 +432,21 @@ function renderReport(r){
   document.getElementById('rpt-transition').textContent=stripCiteTags(r.criticalTransition);
   document.getElementById('rpt-maturity-explain').textContent=stripCiteTags(r.maturityRatingExplanation);
   document.getElementById('rpt-takeaways').textContent=stripCiteTags(r.keyTakeaways);
-
   const icp=r.icpProfile;
-  document.getElementById('rpt-icp').innerHTML=`
-    <div class="icp-card"><div class="icp-key">Account profile</div><div class="icp-val">${stripCiteTags(icp.accountProfile)}</div></div>
-    <div class="icp-card"><div class="icp-key">Buyer title</div><div class="icp-val">${stripCiteTags(icp.buyerTitle)}</div></div>
-    <div class="icp-card"><div class="icp-key">Trigger moment</div><div class="icp-val">${stripCiteTags(icp.triggerMoment)}</div></div>
-    <div class="icp-card"><div class="icp-key">Deal complexity</div><div class="icp-val">${stripCiteTags(icp.dealComplexity)}</div></div>`;
-
+  document.getElementById('rpt-icp').innerHTML=`<div class="icp-card"><div class="icp-key">Account profile</div><div class="icp-val">${stripCiteTags(icp.accountProfile)}</div></div><div class="icp-card"><div class="icp-key">Buyer title</div><div class="icp-val">${stripCiteTags(icp.buyerTitle)}</div></div><div class="icp-card"><div class="icp-key">Trigger moment</div><div class="icp-val">${stripCiteTags(icp.triggerMoment)}</div></div><div class="icp-card"><div class="icp-key">Deal complexity</div><div class="icp-val">${stripCiteTags(icp.dealComplexity)}</div></div>`;
   const stages=['Foundational','Developing','Optimised'];
   const descs=['Core building blocks being established','Solid in some areas, gaps in others','Strong infrastructure, ready to compound'];
   document.getElementById('rpt-maturity').innerHTML=stages.map((s,i)=>`<div class="ms${r.maturityRating===s?' active':''}"><div class="ms-name">${s}</div><div class="ms-desc">${descs[i]}</div></div>`).join('');
-
   const sc=r.scores;
   const s1=Math.round(sc.commercialFoundation*10)/10;
   const s2=Math.round(sc.systemsCrmData*10)/10;
   const s3=Math.round(sc.automationAiReadiness*10)/10;
   const total=Math.round(s1+s2+s3);
   const colors=['#00b4d8','#1D9E75','#EF9F27'];
-
   document.getElementById('rpt-scores').innerHTML=[['Commercial Foundation',s1],['Systems, CRM & Data',s2],['Automation & AI Readiness',s3]].map(([lbl,score],i)=>`<div class="sc"><div class="sc-label">${lbl}</div><div class="sc-bar-bg"><div class="sc-bar-fill" style="width:${score*10}%;background:${colors[i]}"></div></div><span class="sc-num">${score}</span><span class="sc-den"> / 10</span></div>`).join('');
   document.getElementById('rpt-total').textContent=total+' / 30';
-
   const aa=r.areaAnalyses;
   document.getElementById('rpt-analyses').innerHTML=[['Commercial Foundation',s1,aa.commercialFoundation],['Systems, CRM & Data',s2,aa.systemsCrmData],['Automation & AI Readiness',s3,aa.automationAiReadiness]].map(([name,score,body])=>`<div class="area-analysis"><div class="aa-header"><div class="aa-name">${name}</div><div class="aa-score">${score} / 10</div></div><div class="aa-body">${stripCiteTags(body)}</div></div>`).join('');
-
   show('screen-report');
 }
 
@@ -536,56 +456,74 @@ function renderFallback(){
   document.getElementById('rpt-transition').textContent='You have built something real. The product works, you have paying customers, and you have demonstrated genuine demand for what you offer. The next stage - scaling the commercial operation, building a team that performs without the founder in every deal, and demonstrating the commercial rigour investors expect - requires a different infrastructure to the one that generated early traction.';
   document.getElementById('rpt-maturity-explain').textContent='Your answers indicate you are in the early stages of building commercial infrastructure. The analysis below will help you identify where to focus first.';
   document.getElementById('rpt-takeaways').textContent='The common thread across your commercial operation is that the systems, processes and data infrastructure that make a team perform independently are still being established. This is normal at your stage - and it is entirely fixable. The businesses that scale fastest are the ones that address this infrastructure gap before it becomes a constraint on growth.';
-
-  document.getElementById('rpt-icp').innerHTML=`
-    <div class="icp-card"><div class="icp-key">Account profile</div><div class="icp-val">B2B companies at growth stage</div></div>
-    <div class="icp-card"><div class="icp-key">Buyer title</div><div class="icp-val">Founder, CEO or senior commercial leader</div></div>
-    <div class="icp-card"><div class="icp-key">Trigger moment</div><div class="icp-val">Scaling beyond founder-led sales</div></div>
-    <div class="icp-card"><div class="icp-key">Deal complexity</div><div class="icp-val">Multi-stakeholder, consultative sales cycle</div></div>`;
-
+  document.getElementById('rpt-icp').innerHTML=`<div class="icp-card"><div class="icp-key">Account profile</div><div class="icp-val">B2B companies at growth stage</div></div><div class="icp-card"><div class="icp-key">Buyer title</div><div class="icp-val">Founder, CEO or senior commercial leader</div></div><div class="icp-card"><div class="icp-key">Trigger moment</div><div class="icp-val">Scaling beyond founder-led sales</div></div><div class="icp-card"><div class="icp-key">Deal complexity</div><div class="icp-val">Multi-stakeholder, consultative sales cycle</div></div>`;
   const stages=['Foundational','Developing','Optimised'];
   const descs=['Core building blocks being established','Solid in some areas, gaps in others','Strong infrastructure, ready to compound'];
   document.getElementById('rpt-maturity').innerHTML=stages.map((s,i)=>`<div class="ms${i===0?' active':''}"><div class="ms-name">${s}</div><div class="ms-desc">${descs[i]}</div></div>`).join('');
-
   const s1=Math.round((answers.score1/12)*100)/10;
   const s2=Math.round((answers.score2/12)*100)/10;
   const s3=Math.round((answers.score3/12)*100)/10;
   const total=Math.round(s1+s2+s3);
   const colors=['#00b4d8','#1D9E75','#EF9F27'];
-
   document.getElementById('rpt-scores').innerHTML=[['Commercial Foundation',s1],['Systems, CRM & Data',s2],['Automation & AI Readiness',s3]].map(([lbl,score],i)=>`<div class="sc"><div class="sc-label">${lbl}</div><div class="sc-bar-bg"><div class="sc-bar-fill" style="width:${score*10}%;background:${colors[i]}"></div></div><span class="sc-num">${score}</span><span class="sc-den"> / 10</span></div>`).join('');
   document.getElementById('rpt-total').textContent=total+' / 30';
-
-  document.getElementById('rpt-analyses').innerHTML=[
-    ['Commercial Foundation',s1,'Your commercial foundation reflects where most growth-stage businesses are at this point. The process, knowledge and qualification frameworks that make a team perform consistently are still being established. Getting this right is the foundation everything else is built on.'],
-    ['Systems, CRM & Data',s2,'Your data infrastructure and CRM setup have room to grow. The ability to forecast reliably, report commercial metrics with confidence, and give investors the visibility they expect all depend on getting the data layer right.'],
-    ['Automation & AI Readiness',s3,'Your commercial operation has significant automation potential that is currently untapped. Freeing your team from manual work and building the data quality needed for AI to compound your results is the next frontier.']
-  ].map(([name,score,body])=>`<div class="area-analysis"><div class="aa-header"><div class="aa-name">${name}</div><div class="aa-score">${score} / 10</div></div><div class="aa-body">${body}</div></div>`).join('');
-
+  document.getElementById('rpt-analyses').innerHTML=[['Commercial Foundation',s1,'Your commercial foundation reflects where most growth-stage businesses are at this point. The process, knowledge and qualification frameworks that make a team perform consistently are still being established. Getting this right is the foundation everything else is built on.'],['Systems, CRM & Data',s2,'Your data infrastructure and CRM setup have room to grow. The ability to forecast reliably, report commercial metrics with confidence, and give investors the visibility they expect all depend on getting the data layer right.'],['Automation & AI Readiness',s3,'Your commercial operation has significant automation potential that is currently untapped. Freeing your team from manual work and building the data quality needed for AI to compound your results is the next frontier.']].map(([name,score,body])=>`<div class="area-analysis"><div class="aa-header"><div class="aa-name">${name}</div><div class="aa-score">${score} / 10</div></div><div class="aa-body">${body}</div></div>`).join('');
   show('screen-report');
 }
 
 function downloadReport(){
-  const source=document.getElementById('reportWrap');
-  const clone=source.cloneNode(true);
-  clone.style.cssText='background:#ffffff;color:#1a1a2e;padding:32px;max-width:780px;font-family:Georgia,serif;';
-  clone.querySelectorAll('.btn-dl,.btn-audit,.dl-bar').forEach(el=>el.remove());
-  clone.querySelectorAll('*').forEach(el=>{el.style.color='';el.style.background='';el.style.borderColor='';});
-  clone.querySelectorAll('.rpt-title').forEach(el=>{el.style.fontSize='28px';el.style.fontWeight='600';el.style.color='#0a1628';el.style.marginBottom='4px';});
-  clone.querySelectorAll('.rpt-eyebrow,.rsec-tag,.icp-key,.rpt-url,.sc-label,.total-lbl,.cta-det-k,.report-footer p').forEach(el=>{el.style.color='#666666';el.style.fontSize='11px';});
-  clone.querySelectorAll('.rsec-body,.aa-body,.rpt-intro p,.maturity-explain,.takeaways p,.cta-sub').forEach(el=>{el.style.color='#333333';el.style.fontSize='13px';el.style.lineHeight='1.7';});
-  clone.querySelectorAll('.rpt-intro,.icp-card,.sc,.area-analysis,.takeaways,.cta-block,.total-score,.ms').forEach(el=>{el.style.background='#f5f7fa';el.style.border='1px solid #dddddd';el.style.borderRadius='8px';el.style.padding='14px';});
-  clone.querySelectorAll('.ms.active').forEach(el=>{el.style.background='#e6f1fb';el.style.border='2px solid #185fa5';});
-  clone.querySelectorAll('.aa-score,.sc-num,.total-val').forEach(el=>{el.style.color='#185fa5';});
-  clone.querySelectorAll('.aa-name,.icp-val,.cta-title,.ms-name,.total-lbl,.rpt-title').forEach(el=>{el.style.color='#0a1628';});
-  clone.querySelectorAll('.ms.active .ms-name').forEach(el=>{el.style.color='#185fa5';});
-  clone.querySelectorAll('.report-footer a').forEach(el=>{el.style.color='#185fa5';});
-  const wrapper=document.createElement('div');
-  wrapper.style.cssText='position:absolute;left:-9999px;top:0;background:#ffffff;';
-  wrapper.appendChild(clone);
-  document.body.appendChild(wrapper);
-  const opt={margin:[15,15,15,15],filename:'VentureScale-Commercial-Infrastructure-Assessment.pdf',image:{type:'jpeg',quality:0.97},html2canvas:{scale:2,backgroundColor:'#ffffff',useCORS:true,logging:false},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}};
-  html2pdf().set(opt).from(clone).save().then(()=>{document.body.removeChild(wrapper);});
+  const btn=document.querySelector('.btn-dl');
+  if(btn){btn.textContent='Preparing PDF...';btn.disabled=true;}
+  const get=id=>document.getElementById(id)?document.getElementById(id).textContent.trim():'';
+  const overviewText=get('rpt-overview');
+  const transitionText=get('rpt-transition');
+  const maturityExplain=get('rpt-maturity-explain');
+  const takeawaysText=get('rpt-takeaways');
+  const totalVal=get('rpt-total');
+  const urlText=get('rpt-url');
+  const icpCards=document.querySelectorAll('#rpt-icp .icp-card');
+  let icpHTML='';
+  icpCards.forEach(card=>{
+    const key=card.querySelector('.icp-key')?card.querySelector('.icp-key').textContent:'';
+    const val=card.querySelector('.icp-val')?card.querySelector('.icp-val').textContent:'';
+    icpHTML+=`<div style="background:#f0f4f8;border:1px solid #dde3ea;border-radius:6px;padding:12px 14px"><div style="font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#666;margin-bottom:4px">${key}</div><div style="font-size:13px;color:#1a1a2e;line-height:1.5">${val}</div></div>`;
+  });
+  const maturityStages=document.querySelectorAll('#rpt-maturity .ms');
+  let maturityHTML='';
+  maturityStages.forEach(ms=>{
+    const isActive=ms.classList.contains('active');
+    const name=ms.querySelector('.ms-name')?ms.querySelector('.ms-name').textContent:'';
+    const desc=ms.querySelector('.ms-desc')?ms.querySelector('.ms-desc').textContent:'';
+    maturityHTML+=`<div style="border:${isActive?'2px solid #185fa5':'1px solid #dde3ea'};background:${isActive?'#e6f1fb':'#f8f9fa'};border-radius:6px;padding:12px 10px;text-align:center"><div style="font-size:13px;font-weight:600;color:${isActive?'#185fa5':'#666'};margin-bottom:3px">${name}</div><div style="font-size:11px;color:${isActive?'#185fa5':'#999'};line-height:1.4">${desc}</div></div>`;
+  });
+  const scoreCards=document.querySelectorAll('#rpt-scores .sc');
+  const barColors=['#00b4d8','#1D9E75','#EF9F27'];
+  let scoresHTML='';
+  scoreCards.forEach((sc,i)=>{
+    const label=sc.querySelector('.sc-label')?sc.querySelector('.sc-label').textContent:'';
+    const num=sc.querySelector('.sc-num')?sc.querySelector('.sc-num').textContent:'';
+    const fillEl=sc.querySelector('.sc-bar-fill');
+    const width=fillEl?fillEl.style.width:'0%';
+    scoresHTML+=`<div style="background:#f0f4f8;border:1px solid #dde3ea;border-radius:6px;padding:12px"><div style="font-size:11px;color:#666;margin-bottom:8px;line-height:1.4">${label}</div><div style="height:4px;background:#dde3ea;border-radius:2px;margin-bottom:8px"><div style="height:4px;width:${width};background:${barColors[i]};border-radius:2px"></div></div><span style="font-size:22px;font-weight:600;color:#1a1a2e">${num}</span><span style="font-size:12px;color:#666"> / 10</span></div>`;
+  });
+  const analyses=document.querySelectorAll('#rpt-analyses .area-analysis');
+  let analysesHTML='';
+  analyses.forEach(aa=>{
+    const name=aa.querySelector('.aa-name')?aa.querySelector('.aa-name').textContent:'';
+    const score=aa.querySelector('.aa-score')?aa.querySelector('.aa-score').textContent:'';
+    const body=aa.querySelector('.aa-body')?aa.querySelector('.aa-body').textContent:'';
+    analysesHTML+=`<div style="background:#f0f4f8;border:1px solid #dde3ea;border-radius:8px;padding:18px 20px;margin-bottom:10px"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px"><div style="font-size:14px;font-weight:600;color:#1a1a2e">${name}</div><div style="font-size:16px;font-weight:600;color:#185fa5">${score}</div></div><div style="font-size:13px;line-height:1.75;color:#333">${body}</div></div>`;
+  });
+  const html=`<!DOCTYPE html><html><head><meta charset="UTF-8"><style>body{font-family:Georgia,serif;background:#fff;color:#1a1a2e;margin:0;padding:40px;max-width:760px}h1{font-size:28px;font-weight:600;color:#0a1628;margin:0 0 4px}.eyebrow{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#888;margin-bottom:8px}.url{font-size:13px;color:#888;margin-bottom:0}.divider{border:none;border-top:1px solid #dde3ea;margin:20px 0}.intro{background:#f0f4f8;border:1px solid #dde3ea;border-radius:8px;padding:18px 20px;margin-bottom:28px}.intro p{font-size:13px;line-height:1.8;color:#333;margin:0 0 10px}.intro p:last-child{margin:0}.sec-tag{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#185fa5;margin-bottom:8px}.sec-body{font-size:14px;line-height:1.8;color:#333;margin-bottom:24px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}.total{background:#f0f4f8;border:1px solid #dde3ea;border-radius:6px;padding:12px 16px;display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.total-lbl{font-size:13px;font-weight:600;color:#1a1a2e}.total-val{font-size:20px;font-weight:600;color:#185fa5}.explain{font-size:13px;color:#666;font-style:italic;margin:8px 0 24px;line-height:1.6}.takeaways{background:#e8f5ee;border:1px solid #9fe1cb;border-radius:8px;padding:18px 20px;margin-bottom:24px}.takeaways p{font-size:14px;line-height:1.8;color:#085041;margin:0}.footer{border-top:1px solid #dde3ea;padding-top:16px;text-align:center}.footer p{font-size:12px;color:#888;line-height:1.7;margin:0 0 4px}.footer a{color:#185fa5}.cta{border:1px solid #b5d4f4;border-radius:8px;padding:22px;text-align:center;background:#f0f7fe;margin-bottom:24px}.cta h3{font-size:18px;color:#0a1628;margin:0 0 6px}.cta p{font-size:13px;color:#444;margin:0 0 14px;line-height:1.6}.cta-row{display:flex;justify-content:center;gap:24px;margin-bottom:14px}.cta-item{text-align:center}.cta-k{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#888;margin-bottom:2px}.cta-v{font-size:13px;font-weight:600;color:#185fa5}</style></head><body><div class="eyebrow">VentureScale - Confidential</div><h1>The Commercial Infrastructure Assessment</h1><div class="url">${urlText}</div><hr class="divider"><div class="intro"><p>The Commercial Infrastructure Assessment assesses your commercial operation across three critical areas - Commercial Foundation, Systems & Data Infrastructure, and Automation & AI Readiness - giving you a clear picture of where your business stands and what needs to change to build a scalable and repeatable sales engine.</p><p>Use this report to identify where your commercial infrastructure is strong, where the gaps are, and what to prioritise first. The findings are designed to be shared with your leadership team, used to inform your commercial roadmap, or presented to investors as evidence of commercial self-awareness and strategic clarity.</p></div><div class="sec-tag">01 - Company overview</div><div class="sec-body">${overviewText}</div><div class="sec-tag">02 - ICP profile</div><div class="grid2" style="margin-bottom:24px">${icpHTML}</div><div class="sec-tag">03 - The critical transition</div><div class="sec-body">${transitionText}</div><div class="sec-tag">04 - Commercial infrastructure maturity</div><div class="grid3">${maturityHTML}</div><div class="explain">${maturityExplain}</div><div class="sec-tag">05 - Scorecard</div><div class="grid3">${scoresHTML}</div><div class="total"><span class="total-lbl">Overall commercial infrastructure score</span><span class="total-val">${totalVal}</span></div><div class="sec-tag">06 - Area analysis</div>${analysesHTML}<div class="sec-tag" style="margin-top:8px">07 - Key takeaways</div><div class="takeaways"><p>${takeawaysText}</p></div><div class="cta"><h3>You have seen the picture. The next step is building it.</h3><p>The Commercial Infrastructure Audit goes inside your business and produces a detailed findings report with a prioritised plan to fix what this assessment has identified.</p><div class="cta-row"><div class="cta-item"><div class="cta-k">Delivered in</div><div class="cta-v">5 days</div></div><div class="cta-item"><div class="cta-k">Format</div><div class="cta-v">Report + call</div></div></div><div style="font-size:13px;color:#185fa5;font-weight:600">meetings-eu1.hubspot.com/gmarquesini/intro-germain</div></div><div class="footer"><p>This assessment was created by VentureScale. We design and build the systems, processes and data architecture that growth-stage businesses need to scale.</p><p>Contact Germain Marquesini at <a href="mailto:germain@venturescaleconsultancy.com">germain@venturescaleconsultancy.com</a> or visit <a href="https://venturescale.co.uk">venturescale.co.uk</a></p></div></body></html>`;
+  const container=document.createElement('div');
+  container.style.cssText='position:absolute;left:-9999px;top:0;background:#fff;width:800px;';
+  container.innerHTML=html;
+  document.body.appendChild(container);
+  const opt={margin:[12,12,12,12],filename:'VentureScale-Commercial-Infrastructure-Assessment.pdf',image:{type:'jpeg',quality:0.97},html2canvas:{scale:2,backgroundColor:'#ffffff',useCORS:true,logging:false},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}};
+  html2pdf().set(opt).from(container.firstChild).save().then(()=>{
+    document.body.removeChild(container);
+    if(btn){btn.textContent='Download as PDF';btn.disabled=false;}
+  });
 }
 </script>
 </body>
