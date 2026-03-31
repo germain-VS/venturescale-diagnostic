@@ -1,72 +1,554 @@
-VENTURESCALE
-FREE - INSTANT DOWNLOAD
-Is your commercial operation built to scale?
-Scaling a commercial operation requires more than ambition and headcount. The Commercial Infrastructure Assessment scores your business across three critical areas - giving you a clear picture of where you stand and what to prioritise to build a scalable, repeatable sales engine.
-Free Instant download No sales call required
-AREA 01
-Commercial Foundation
-Processes, ICP definition and knowledge infrastructure
-AREA 02
-Systems & Data
-CRM setup, data quality and board-ready reporting
-AREA 03
-Automation & AI Readiness
-Manual operations, tech stack and AI readiness
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Commercial Infrastructure Assessment — VentureScale</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<style>
+:root{--navy:#0a1628;--navy-mid:#112240;--cyan:#00b4d8;--cyan-dim:rgba(0,180,216,0.1);--teal:#0f6e56;--white:#ffffff;--muted:rgba(255,255,255,0.52);--border:rgba(255,255,255,0.08);--border-cyan:rgba(0,180,216,0.28);--amber:#854F0B;--amber-light:rgba(133,79,11,0.12)}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
+.screen{display:none}
+.screen.active{display:block}
+nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,22,40,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav-logo{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--white);text-decoration:none}
+.nav-logo span{color:var(--cyan)}
+.nav-tag{font-size:12px;color:var(--muted);letter-spacing:.04em}
+.entry-title{font-family:'Instrument Serif',serif;font-size:clamp(34px,5vw,54px);line-height:1.1;font-weight:400;margin-bottom:14px}
+.entry-title em{font-style:italic;color:var(--cyan)}
+.entry-desc{font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:36px;font-weight:300}
+.entry-form{background:var(--navy-mid);border:1px solid var(--border);border-radius:12px;padding:28px}
+.fl{margin-bottom:14px;text-align:left}
+.fl label{display:block;font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.38);margin-bottom:5px}
+.fi{width:100%;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:6px;padding:12px 15px;color:var(--white);font-family:'DM Sans',sans-serif;font-size:15px;outline:none;transition:border-color .15s}
+.fi:focus{border-color:var(--border-cyan)}
+.fi::placeholder{color:rgba(255,255,255,.2)}
+.btn-go{width:100%;background:var(--cyan);border:none;color:var(--navy);font-family:'DM Sans',sans-serif;font-size:15px;font-weight:600;padding:15px;border-radius:6px;cursor:pointer;transition:all .2s;margin-top:6px}
+.btn-go:hover{background:#00c8f0;transform:translateY(-1px)}
+.lp-hero{max-width:640px;margin:0 auto;padding:80px 24px 60px;text-align:center}
+.lp-eyebrow{font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--cyan);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:8px}
+.lp-eyebrow::before,.lp-eyebrow::after{content:'';width:20px;height:1px;background:var(--cyan);opacity:.5}
+.lp-badge-row{display:flex;justify-content:center;gap:8px;margin-bottom:40px;flex-wrap:wrap}
+.lp-badge{font-size:12px;color:var(--muted);background:rgba(255,255,255,0.05);border:1px solid var(--border);border-radius:20px;padding:5px 14px;display:flex;align-items:center;gap:5px}
+.lp-badge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--teal);flex-shrink:0}
+.lp-areas{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:680px;margin:0 auto 52px;padding:0 24px}
+.lp-area{background:var(--navy-mid);border:1px solid var(--border);border-radius:10px;padding:18px 16px;text-align:left}
+.lp-area-num{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--cyan);opacity:.6;margin-bottom:8px}
+.lp-area-name{font-size:14px;font-weight:500;color:var(--white);margin-bottom:6px;line-height:1.3}
+.lp-area-desc{font-size:12px;color:var(--muted);line-height:1.6}
+.lp-divider{height:1px;background:rgba(255,255,255,0.06);margin:0 24px 52px}
+.lp-form-wrap{max-width:480px;margin:0 auto;padding:0 24px 60px}
+#screen-questions{min-height:100vh;display:flex;flex-direction:column}
+.q-wrap{display:grid;grid-template-columns:340px 1fr;flex:1;min-height:calc(100vh - 57px)}
+.q-left{background:var(--navy-mid);border-right:1px solid var(--border);padding:40px 32px;display:flex;flex-direction:column;gap:0}
+.spinner{width:28px;height:28px;border:2px solid var(--border);border-top-color:var(--cyan);border-radius:50%;animation:spin .8s linear infinite;margin-bottom:16px}
+.q-left-label{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);opacity:.65;margin-bottom:12px}
+.q-left-title{font-family:'Instrument Serif',serif;font-size:20px;font-weight:400;color:var(--white);margin-bottom:8px;line-height:1.3}
+.q-left-sub{font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:28px}
+.ls-list{display:flex;flex-direction:column;gap:6px;margin-bottom:32px}
+.ls{display:flex;align-items:center;gap:8px;font-size:13px;color:rgba(255,255,255,.25);transition:color .3s}
+.ls.active{color:var(--cyan)}
+.ls.done{color:rgba(255,255,255,.55)}
+.ls-dot{width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.12);flex-shrink:0;transition:background .3s}
+.ls.active .ls-dot{background:var(--cyan);animation:pulse 1s infinite}
+.ls.done .ls-dot{background:var(--teal)}
+.prog-label{font-size:11px;color:var(--muted);margin-bottom:8px;display:flex;justify-content:space-between}
+.prog-track{height:3px;background:var(--border);border-radius:2px;margin-bottom:10px}
+.prog-fill{height:100%;background:linear-gradient(90deg,var(--cyan),var(--teal));border-radius:2px;transition:width .5s ease;width:0%}
+.prog-areas{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.pa{border:1px solid var(--border);border-radius:5px;padding:7px 6px;text-align:center;transition:all .25s}
+.pa.active{border-color:var(--cyan);background:var(--cyan-dim)}
+.pa.done{border-color:var(--teal);background:rgba(15,110,86,.1)}
+.pa-name{font-size:10px;font-weight:500;color:rgba(255,255,255,.3);transition:color .25s;line-height:1.3}
+.pa.active .pa-name{color:var(--cyan)}
+.pa.done .pa-name{color:#2dd4a0}
+.q-right{padding:40px 44px;overflow-y:auto;display:flex;flex-direction:column;justify-content:center}
+.area-tag{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);opacity:.65;margin-bottom:6px}
+.area-name{font-family:'Instrument Serif',serif;font-size:22px;font-weight:400;color:var(--white);margin-bottom:24px}
+.qblock{margin-bottom:18px}
+.qtext{font-size:14px;font-weight:500;color:var(--white);margin-bottom:10px;line-height:1.4}
+.opts{display:flex;flex-direction:column;gap:5px}
+.opt{display:flex;align-items:flex-start;gap:10px;padding:11px 13px;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:6px;cursor:pointer;transition:all .15s}
+.opt:hover{border-color:var(--border-cyan);background:var(--cyan-dim)}
+.opt.sel{border-color:var(--cyan);background:var(--cyan-dim)}
+.opt-radio{width:13px;height:13px;border-radius:50%;border:1px solid rgba(255,255,255,.22);flex-shrink:0;margin-top:2px;transition:all .15s}
+.opt.sel .opt-radio{background:var(--cyan);border-color:var(--cyan)}
+.opt-txt{font-size:13px;color:rgba(255,255,255,.65);line-height:1.5;transition:color .15s}
+.opt.sel .opt-txt{color:var(--white)}
+.q-footer{display:flex;justify-content:flex-end;padding-top:20px;margin-top:4px;border-top:1px solid var(--border)}
+.btn-next{background:var(--cyan);border:none;color:var(--navy);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;padding:12px 26px;border-radius:6px;cursor:pointer;transition:all .2s}
+.btn-next:hover{background:#00c8f0}
+.btn-next:disabled{opacity:.3;cursor:not-allowed;transform:none}
+#screen-report{min-height:100vh;background:var(--navy)}
+.report-wrap{max-width:780px;margin:0 auto;padding:48px 24px 80px}
+.rpt-header{border-bottom:1px solid var(--border);padding-bottom:24px;margin-bottom:32px}
+.rpt-eyebrow{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);opacity:.65;margin-bottom:8px}
+.rpt-title{font-family:'Instrument Serif',serif;font-size:34px;font-weight:400;color:var(--white);margin-bottom:4px}
+.rpt-url{font-size:13px;color:var(--muted)}
+.rpt-intro{background:var(--navy-mid);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-bottom:32px}
+.rpt-intro p{font-size:13px;line-height:1.8;color:rgba(255,255,255,.6);margin-bottom:10px}
+.rpt-intro p:last-child{margin-bottom:0}
+.rsec{margin-bottom:32px}
+.rsec-tag{font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--cyan);opacity:.6;margin-bottom:8px}
+.rsec-body{font-size:14px;line-height:1.8;color:rgba(255,255,255,.65)}
+.icp-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.icp-card{background:var(--navy-mid);border:1px solid var(--border);border-radius:8px;padding:13px 15px}
+.icp-key{font-size:10px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.3);margin-bottom:4px}
+.icp-val{font-size:13px;color:var(--white);line-height:1.5}
+.maturity-stages{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.ms{border:1px solid var(--border);border-radius:8px;padding:14px 10px;text-align:center;transition:all .2s}
+.ms.active{border:2px solid var(--cyan);background:var(--cyan-dim)}
+.ms-name{font-size:13px;font-weight:500;color:rgba(255,255,255,.35);margin-bottom:4px;transition:color .2s}
+.ms.active .ms-name{color:var(--cyan)}
+.ms-desc{font-size:11px;color:rgba(255,255,255,.2);line-height:1.4;transition:color .2s}
+.ms.active .ms-desc{color:rgba(0,180,216,.65)}
+.maturity-explain{font-size:13px;color:var(--muted);margin-top:10px;line-height:1.65;font-style:italic}
+.score-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.sc{background:var(--navy-mid);border:1px solid var(--border);border-radius:8px;padding:14px}
+.sc-label{font-size:11px;color:var(--muted);margin-bottom:10px;line-height:1.4}
+.sc-bar-bg{height:4px;background:rgba(255,255,255,.07);border-radius:2px;margin-bottom:8px}
+.sc-bar-fill{height:4px;border-radius:2px}
+.sc-num{font-family:'Instrument Serif',serif;font-size:26px;font-style:italic;color:var(--white)}
+.sc-den{font-size:12px;color:var(--muted)}
+.total-score{background:var(--navy-mid);border:1px solid var(--border);border-radius:8px;padding:13px 16px;display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.total-lbl{font-size:13px;font-weight:500;color:var(--white)}
+.total-val{font-family:'Instrument Serif',serif;font-size:22px;font-style:italic;color:var(--cyan)}
+.area-analysis{background:var(--navy-mid);border:1px solid var(--border);border-radius:10px;padding:20px 22px;margin-bottom:8px}
+.aa-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.aa-name{font-size:15px;font-weight:500;color:var(--white)}
+.aa-score{font-family:'Instrument Serif',serif;font-size:18px;font-style:italic;color:var(--cyan)}
+.aa-body{font-size:13px;line-height:1.8;color:rgba(255,255,255,.62)}
+.takeaways{background:rgba(15,110,86,.07);border:1px solid rgba(15,110,86,.2);border-radius:10px;padding:22px}
+.takeaways p{font-size:14px;line-height:1.8;color:rgba(255,255,255,.68)}
+.dl-bar{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:var(--cyan-dim);border:1px solid var(--border-cyan);border-radius:8px;margin-bottom:10px;flex-wrap:wrap;gap:10px}
+.dl-bar p{font-size:13px;color:var(--muted)}
+.btn-dl{background:none;border:1px solid var(--border-cyan);color:var(--cyan);font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:9px 16px;border-radius:5px;cursor:pointer;transition:all .2s}
+.btn-dl:hover{background:var(--cyan-dim)}
+.cta-block{border:1px solid var(--border-cyan);border-radius:10px;padding:28px;text-align:center;background:rgba(0,180,216,.04);margin-bottom:24px}
+.cta-title{font-family:'Instrument Serif',serif;font-size:20px;font-weight:400;color:var(--white);margin-bottom:6px}
+.cta-sub{font-size:13px;color:var(--muted);margin-bottom:18px;line-height:1.65}
+.cta-details{display:flex;justify-content:center;gap:24px;margin-bottom:18px;flex-wrap:wrap}
+.cta-det-k{font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.26);margin-bottom:2px}
+.cta-det-v{font-size:13px;font-weight:500;color:var(--cyan)}
+.btn-audit{display:inline-flex;align-items:center;gap:6px;background:var(--cyan);color:var(--navy);font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;padding:13px 26px;border-radius:6px;text-decoration:none;transition:all .2s;border:none;cursor:pointer}
+.btn-audit:hover{background:#00c8f0}
+.report-footer{border-top:1px solid var(--border);padding-top:20px;text-align:center}
+.report-footer p{font-size:12px;color:rgba(255,255,255,.28);line-height:1.7}
+.report-footer a{color:var(--cyan);text-decoration:none}
+.report-footer a:hover{text-decoration:underline}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.fade-in{animation:fadeUp .4s ease forwards}
+@media(max-width:768px){
+  nav{padding:16px 20px}
+  .q-wrap{grid-template-columns:1fr}
+  .q-left{display:none}
+  .q-right{padding:24px 20px;justify-content:flex-start}
+  .report-wrap{padding:28px 16px 60px}
+  .icp-grid,.score-cards{grid-template-columns:1fr 1fr}
+  .maturity-stages{grid-template-columns:repeat(3,1fr)}
+  .cta-details{gap:14px}
+  .lp-areas{grid-template-columns:1fr}
+  .lp-hero{padding:48px 24px 40px}
+}
+</style>
+</head>
+<body>
 
-WORK EMAIL
-COMPANY WEBSITE
-Generate my Commercial Infrastructure Assessment →
-VENTURESCALE
-Generating your report...
+<!-- ENTRY SCREEN -->
+<div id="screen-entry" class="screen active">
+  <nav>
+    <a href="https://venturescale.co.uk" class="nav-logo">Venture<span>Scale</span></a>
+  </nav>
+  <div class="lp-hero">
+    <div class="lp-eyebrow">Free - Instant Download</div>
+    <h1 class="entry-title">Is your commercial operation<br>built to <em>scale?</em></h1>
+    <p class="entry-desc">Scaling a commercial operation requires more than ambition and headcount. The Commercial Infrastructure Assessment scores your business across three critical areas - giving you a clear picture of where you stand and what to prioritise to build a scalable, repeatable sales engine.</p>
+    <div class="lp-badge-row">
+      <div class="lp-badge">Free</div>
+      <div class="lp-badge">Instant download</div>
+      <div class="lp-badge">No sales call required</div>
+    </div>
+  </div>
+  <div class="lp-areas">
+    <div class="lp-area">
+      <div class="lp-area-num">Area 01</div>
+      <div class="lp-area-name">Commercial Foundation</div>
+      <div class="lp-area-desc">Processes, ICP definition and knowledge infrastructure</div>
+    </div>
+    <div class="lp-area">
+      <div class="lp-area-num">Area 02</div>
+      <div class="lp-area-name">Systems & Data</div>
+      <div class="lp-area-desc">CRM setup, data quality and board-ready reporting</div>
+    </div>
+    <div class="lp-area">
+      <div class="lp-area-num">Area 03</div>
+      <div class="lp-area-name">Automation & AI Readiness</div>
+      <div class="lp-area-desc">Manual operations, tech stack and AI readiness</div>
+    </div>
+  </div>
+  <div class="lp-divider"></div>
+  <div class="lp-form-wrap">
+    <div class="entry-form">
+      <div class="fl">
+        <label>Work email</label>
+        <input type="email" class="fi" id="entry-email" placeholder="you@company.com" />
+      </div>
+      <div class="fl">
+        <label>Company website</label>
+        <input type="url" class="fi" id="entry-url" placeholder="https://yourcompany.com" />
+      </div>
+      <button class="btn-go" onclick="startReport()">Generate my Commercial Infrastructure Assessment →</button>
+    </div>
+  </div>
+</div>
 
-BUILDING YOUR REPORT
-Analysing your business...
-While we build your report, answer a few quick questions to personalise your results.
+<!-- QUESTIONS SCREEN -->
+<div id="screen-questions" class="screen">
+  <nav>
+    <a href="https://venturescale.co.uk" class="nav-logo">Venture<span>Scale</span></a>
+    <span class="nav-tag">Generating your assessment...</span>
+  </nav>
+  <div class="q-wrap">
+    <div class="q-left">
+      <div class="spinner"></div>
+      <div class="q-left-label">Building your assessment</div>
+      <div class="q-left-title">Analysing your business...</div>
+      <p class="q-left-sub">While we build your assessment, answer a few quick questions to personalise your results.</p>
+      <div class="ls-list">
+        <div class="ls active" id="ls1"><div class="ls-dot"></div>Searching for company data</div>
+        <div class="ls" id="ls2"><div class="ls-dot"></div>Reading your website</div>
+        <div class="ls" id="ls3"><div class="ls-dot"></div>Building company overview</div>
+        <div class="ls" id="ls4"><div class="ls-dot"></div>Analysing your answers</div>
+        <div class="ls" id="ls5"><div class="ls-dot"></div>Calculating your scores</div>
+        <div class="ls" id="ls6"><div class="ls-dot"></div>Generating your assessment</div>
+      </div>
+      <div>
+        <div class="prog-label"><span>Progress</span><span id="prog-pct">0%</span></div>
+        <div class="prog-track"><div class="prog-fill" id="prog-fill"></div></div>
+        <div class="prog-areas">
+          <div class="pa active" id="pa1"><div class="pa-name">Commercial Foundation</div></div>
+          <div class="pa" id="pa2"><div class="pa-name">Systems & Data</div></div>
+          <div class="pa" id="pa3"><div class="pa-name">Automation & AI</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="q-right">
+      <!-- AREA 1 -->
+      <div id="area1" class="fade-in">
+        <div class="area-tag">Area 1 of 3</div>
+        <div class="area-name">Commercial Foundation</div>
+        <div class="qblock">
+          <div class="qtext">How would a new sales hire learn your sales process today?</div>
+          <div class="opts" data-q="q1">
+            <div class="opt" onclick="selectOpt(this,'q1',1)"><div class="opt-radio"></div><div class="opt-txt">It would come directly from the founder - there's nothing written down</div></div>
+            <div class="opt" onclick="selectOpt(this,'q1',2)"><div class="opt-radio"></div><div class="opt-txt">We have some outdated notes or informal documentation but nothing structured</div></div>
+            <div class="opt" onclick="selectOpt(this,'q1',3)"><div class="opt-radio"></div><div class="opt-txt">We have a documented process but it's outdated or not consistently followed</div></div>
+            <div class="opt" onclick="selectOpt(this,'q1',4)"><div class="opt-radio"></div><div class="opt-txt">We have a full documented playbook they could follow independently from day one</div></div>
+          </div>
+        </div>
+        <div class="qblock">
+          <div class="qtext">How clearly defined is your Ideal Customer Profile across your commercial team?</div>
+          <div class="opts" data-q="q2">
+            <div class="opt" onclick="selectOpt(this,'q2',1)"><div class="opt-radio"></div><div class="opt-txt">It lives with the founder - the team targets based on instinct or the founder's guidance</div></div>
+            <div class="opt" onclick="selectOpt(this,'q2',2)"><div class="opt-radio"></div><div class="opt-txt">We have a rough ICP but it's not formally defined or consistently applied</div></div>
+            <div class="opt" onclick="selectOpt(this,'q2',3)"><div class="opt-radio"></div><div class="opt-txt">Our ICP is defined but qualification varies between team members</div></div>
+            <div class="opt" onclick="selectOpt(this,'q2',4)"><div class="opt-radio"></div><div class="opt-txt">We have a precise ICP with a qualification framework the whole team applies consistently</div></div>
+          </div>
+        </div>
+        <div class="qblock">
+          <div class="qtext">Where does your product knowledge and competitive positioning live?</div>
+          <div class="opts" data-q="q3">
+            <div class="opt" onclick="selectOpt(this,'q3',1)"><div class="opt-radio"></div><div class="opt-txt">Primarily with the founder - they handle the complex conversations and objections</div></div>
+            <div class="opt" onclick="selectOpt(this,'q3',2)"><div class="opt-radio"></div><div class="opt-txt">Partially documented but the team still relies on the founder for difficult questions</div></div>
+            <div class="opt" onclick="selectOpt(this,'q3',3)"><div class="opt-radio"></div><div class="opt-txt">Mostly documented but not structured enough for a new hire to use independently</div></div>
+            <div class="opt" onclick="selectOpt(this,'q3',4)"><div class="opt-radio"></div><div class="opt-txt">Fully documented knowledge base - any team member can handle any conversation confidently</div></div>
+          </div>
+        </div>
+        <div class="q-footer">
+          <button class="btn-next" id="btn-next1" disabled onclick="nextArea(1)">Next: Systems & Data →</button>
+        </div>
+      </div>
+      <!-- AREA 2 -->
+      <div id="area2" style="display:none">
+        <div class="area-tag">Area 2 of 3</div>
+        <div class="area-name">Systems, CRM & Data</div>
+        <div class="qblock">
+          <div class="qtext">Is your CRM set up and optimised for your unique sales process and data requirements?</div>
+          <div class="opts" data-q="q4">
+            <div class="opt" onclick="selectOpt(this,'q4',1)"><div class="opt-radio"></div><div class="opt-txt">No - we have a CRM but it's essentially out of the box with minimal customisation</div></div>
+            <div class="opt" onclick="selectOpt(this,'q4',2)"><div class="opt-radio"></div><div class="opt-txt">Partially - some customisation exists but it doesn't fully reflect how we actually sell</div></div>
+            <div class="opt" onclick="selectOpt(this,'q4',3)"><div class="opt-radio"></div><div class="opt-txt">Mostly - it's set up for our process but data quality and adoption are inconsistent</div></div>
+            <div class="opt" onclick="selectOpt(this,'q4',4)"><div class="opt-radio"></div><div class="opt-txt">Yes - fully customised, consistently used, and we have full reporting capabilities across all key commercial metrics</div></div>
+          </div>
+        </div>
+        <div class="qblock">
+          <div class="qtext">If your board asked for pipeline coverage, stage conversion rates and CAC in your next meeting - how would you respond?</div>
+          <div class="opts" data-q="q5">
+            <div class="opt" onclick="selectOpt(this,'q5',1)"><div class="opt-radio"></div><div class="opt-txt">I'd struggle - we don't have that data readily available</div></div>
+            <div class="opt" onclick="selectOpt(this,'q5',2)"><div class="opt-radio"></div><div class="opt-txt">I could pull something together but it would take time and wouldn't be fully reliable</div></div>
+            <div class="opt" onclick="selectOpt(this,'q5',3)"><div class="opt-radio"></div><div class="opt-txt">I could produce it but I'd have some reservations about the accuracy</div></div>
+            <div class="opt" onclick="selectOpt(this,'q5',4)"><div class="opt-radio"></div><div class="opt-txt">I could pull it in minutes with full confidence in the numbers</div></div>
+          </div>
+        </div>
+        <div class="qblock">
+          <div class="qtext">How reliable is your revenue forecast?</div>
+          <div class="opts" data-q="q6">
+            <div class="opt" onclick="selectOpt(this,'q6',1)"><div class="opt-radio"></div><div class="opt-txt">We don't have a formal forecast - it's based on gut feel</div></div>
+            <div class="opt" onclick="selectOpt(this,'q6',2)"><div class="opt-radio"></div><div class="opt-txt">We have a forecast but it's regularly significantly off</div></div>
+            <div class="opt" onclick="selectOpt(this,'q6',3)"><div class="opt-radio"></div><div class="opt-txt">Our forecast is directionally right but the margin of error is too high</div></div>
+            <div class="opt" onclick="selectOpt(this,'q6',4)"><div class="opt-radio"></div><div class="opt-txt">Our forecast is consistently reliable and we can explain variances clearly</div></div>
+          </div>
+        </div>
+        <div class="q-footer">
+          <button class="btn-next" id="btn-next2" disabled onclick="nextArea(2)">Next: Automation & AI →</button>
+        </div>
+      </div>
+      <!-- AREA 3 -->
+      <div id="area3" style="display:none">
+        <div class="area-tag">Area 3 of 3 - Final section</div>
+        <div class="area-name">Automation & AI Readiness</div>
+        <div class="qblock">
+          <div class="qtext">How much of your team's time is spent on manual tasks that a system could handle?</div>
+          <div class="opts" data-q="q7">
+            <div class="opt" onclick="selectOpt(this,'q7',1)"><div class="opt-radio"></div><div class="opt-txt">A significant amount - admin, data entry, follow-ups and reporting are all manual</div></div>
+            <div class="opt" onclick="selectOpt(this,'q7',2)"><div class="opt-radio"></div><div class="opt-txt">Quite a lot - we have some automation but most things are still done manually</div></div>
+            <div class="opt" onclick="selectOpt(this,'q7',3)"><div class="opt-radio"></div><div class="opt-txt">Some - we've automated a few things but there's a lot more we could be doing</div></div>
+            <div class="opt" onclick="selectOpt(this,'q7',4)"><div class="opt-radio"></div><div class="opt-txt">Very little - most repetitive work is automated and the team focuses on selling</div></div>
+          </div>
+        </div>
+        <div class="qblock">
+          <div class="qtext">How connected and integrated is your tech stack?</div>
+          <div class="opts" data-q="q8">
+            <div class="opt" onclick="selectOpt(this,'q8',1)"><div class="opt-radio"></div><div class="opt-txt">Tools are siloed - data doesn't flow between systems</div></div>
+            <div class="opt" onclick="selectOpt(this,'q8',2)"><div class="opt-radio"></div><div class="opt-txt">Some integrations exist but there are significant gaps and manual workarounds</div></div>
+            <div class="opt" onclick="selectOpt(this,'q8',3)"><div class="opt-radio"></div><div class="opt-txt">Mostly connected but not optimised - some manual intervention still required</div></div>
+            <div class="opt" onclick="selectOpt(this,'q8',4)"><div class="opt-radio"></div><div class="opt-txt">Fully integrated - data flows automatically across all systems with no manual intervention</div></div>
+          </div>
+        </div>
+        <div class="qblock">
+          <div class="qtext">How would you describe the quality and consistency of the data your team captures across the sales process?</div>
+          <div class="opts" data-q="q9">
+            <div class="opt" onclick="selectOpt(this,'q9',1)"><div class="opt-radio"></div><div class="opt-txt">Poor - data capture is inconsistent and we can't rely on what's in the system</div></div>
+            <div class="opt" onclick="selectOpt(this,'q9',2)"><div class="opt-radio"></div><div class="opt-txt">Partial - some data is captured consistently but there are significant gaps</div></div>
+            <div class="opt" onclick="selectOpt(this,'q9',3)"><div class="opt-radio"></div><div class="opt-txt">Mostly consistent - but not structured or complete enough to act on confidently</div></div>
+            <div class="opt" onclick="selectOpt(this,'q9',4)"><div class="opt-radio"></div><div class="opt-txt">Comprehensive - we capture the right data consistently and it's structured for reporting and analysis</div></div>
+          </div>
+        </div>
+        <div class="q-footer">
+          <button class="btn-next" id="btn-next3" disabled onclick="submitAnswers()">Generate my assessment →</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-Searching for company data
+<!-- REPORT SCREEN -->
+<div id="screen-report" class="screen">
+  <nav>
+    <a href="https://venturescale.co.uk" class="nav-logo">Venture<span>Scale</span></a>
+    <span class="nav-tag">The Commercial Infrastructure Assessment</span>
+  </nav>
+  <div class="report-wrap" id="reportWrap">
+    <div class="rpt-header">
+      <div class="rpt-eyebrow">VentureScale - Confidential</div>
+      <div class="rpt-title">The Commercial Infrastructure Assessment</div>
+      <div class="rpt-url" id="rpt-url"></div>
+    </div>
+    <div class="rpt-intro">
+      <p>The Commercial Infrastructure Assessment assesses your commercial operation across three critical areas - Commercial Foundation, Systems & Data Infrastructure, and Automation & AI Readiness - giving you a clear picture of where your business stands and what needs to change to build a scalable and repeatable sales engine.</p>
+      <p>Use this report to identify where your commercial infrastructure is strong, where the gaps are, and what to prioritise first. The findings are designed to be shared with your leadership team, used to inform your commercial roadmap, or presented to investors as evidence of commercial self-awareness and strategic clarity.</p>
+    </div>
+    <div class="rsec">
+      <div class="rsec-tag">01 - Company overview</div>
+      <div class="rsec-body" id="rpt-overview"></div>
+    </div>
+    <div class="rsec">
+      <div class="rsec-tag">02 - ICP profile</div>
+      <div class="icp-grid" id="rpt-icp"></div>
+    </div>
+    <div class="rsec">
+      <div class="rsec-tag">03 - The critical transition</div>
+      <div class="rsec-body" id="rpt-transition"></div>
+    </div>
+    <div class="rsec">
+      <div class="rsec-tag">04 - Commercial infrastructure maturity</div>
+      <div class="maturity-stages" id="rpt-maturity"></div>
+      <div class="maturity-explain" id="rpt-maturity-explain"></div>
+    </div>
+    <div class="rsec">
+      <div class="rsec-tag">05 - Scorecard</div>
+      <div class="score-cards" id="rpt-scores"></div>
+      <div class="total-score">
+        <span class="total-lbl">Overall commercial infrastructure score</span>
+        <span class="total-val" id="rpt-total">- / 30</span>
+      </div>
+    </div>
+    <div class="rsec">
+      <div class="rsec-tag">06 - Area analysis</div>
+      <div id="rpt-analyses"></div>
+    </div>
+    <div class="rsec">
+      <div class="rsec-tag">07 - Key takeaways</div>
+      <div class="takeaways"><p id="rpt-takeaways"></p></div>
+    </div>
+    <div class="dl-bar">
+      <p>Save or share your assessment</p>
+      <button class="btn-dl" onclick="downloadReport()">Download as PDF</button>
+    </div>
+    <div class="cta-block">
+      <div class="cta-title">You've seen the picture. The next step is building it.</div>
+      <p class="cta-sub">The Commercial Infrastructure Audit goes inside your business and produces a detailed findings report with a prioritised plan to fix what this assessment has identified.</p>
+      <div class="cta-details">
+        <div><div class="cta-det-k">Delivered in</div><div class="cta-det-v">5 days</div></div>
+        <div><div class="cta-det-k">Format</div><div class="cta-det-v">Report + call</div></div>
+      </div>
+      <a href="https://meetings-eu1.hubspot.com/gmarquesini/intro-germain" class="btn-audit">Book your Commercial Infrastructure Audit →</a>
+    </div>
+    <div class="report-footer">
+      <p>This assessment was created by VentureScale. We design and build the systems, processes and data architecture that growth-stage businesses need to scale.</p>
+      <p>To discuss your results or take the next step, contact Germain Marquesini at <a href="mailto:germain@venturescaleconsultancy.com">germain@venturescaleconsultancy.com</a> or visit <a href="https://venturescale.co.uk">venturescale.co.uk</a></p>
+    </div>
+  </div>
+</div>
 
-Reading your website
+<script>
+const answers={};
+const scores={q1:0,q2:0,q3:0,q4:0,q5:0,q6:0,q7:0,q8:0,q9:0};
 
-Building company overview
+function show(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo(0,0);
+}
 
-Analysing your answers
+function startReport(){
+  const email=document.getElementById('entry-email').value.trim();
+  const url=document.getElementById('entry-url').value.trim();
+  if(!email||!url){alert('Please enter your work email and company URL.');return;}
+  answers.email=email;
+  answers.website=url;
+  show('screen-questions');
+  startLoadingAnimation();
+}
 
-Calculating your scores
+let loadingStep=0;
+const lsIds=['ls1','ls2','ls3','ls4','ls5','ls6'];
+function startLoadingAnimation(){
+  const iv=setInterval(()=>{
+    if(loadingStep>0){document.getElementById(lsIds[loadingStep-1]).classList.remove('active');document.getElementById(lsIds[loadingStep-1]).classList.add('done');}
+    if(loadingStep<lsIds.length){document.getElementById(lsIds[loadingStep]).classList.add('active');loadingStep++;}
+    else clearInterval(iv);
+  },4000);
+}
 
-Generating your report
-Progress
-0%
+function selectOpt(el,q,score){
+  const parent=el.closest('.opts');
+  parent.querySelectorAll('.opt').forEach(o=>o.classList.remove('sel'));
+  el.classList.add('sel');
+  answers[q]=el.querySelector('.opt-txt').textContent.trim();
+  scores[q]=score;
+  checkAreaComplete(q);
+}
 
-Commercial Foundation
-Systems & Data
-Automation & AI
-AREA 1 OF 3
-Commercial Foundation
-How would a new sales hire learn your sales process today?
+function checkAreaComplete(q){
+  if(['q1','q2','q3'].includes(q)&&['q1','q2','q3'].every(k=>scores[k]>0))document.getElementById('btn-next1').disabled=false;
+  if(['q4','q5','q6'].includes(q)&&['q4','q5','q6'].every(k=>scores[k]>0))document.getElementById('btn-next2').disabled=false;
+  if(['q7','q8','q9'].includes(q)&&['q7','q8','q9'].every(k=>scores[k]>0))document.getElementById('btn-next3').disabled=false;
+}
 
-It would come directly from the founder — there's nothing written down
+function nextArea(area){
+  document.getElementById('area'+area).style.display='none';
+  document.getElementById('area'+(area+1)).style.display='block';
+  document.getElementById('area'+(area+1)).classList.add('fade-in');
+  updateProgress(area);
+  window.scrollTo(0,0);
+}
 
-We have some outdated notes or informal documentation but nothing structured
+function updateProgress(completedArea){
+  const pct=Math.round((completedArea/3)*100);
+  document.getElementById('prog-fill').style.width=pct+'%';
+  document.getElementById('prog-pct').textContent=pct+'%';
+  document.getElementById('pa'+completedArea).classList.remove('active');
+  document.getElementById('pa'+completedArea).classList.add('done');
+  if(completedArea<3)document.getElementById('pa'+(completedArea+1)).classList.add('active');
+}
 
-We have a documented process but it's outdated or not consistently followed
+async function submitAnswers(){
+  updateProgress(3);
+  answers.score1=scores.q1+scores.q2+scores.q3;
+  answers.score2=scores.q4+scores.q5+scores.q6;
+  answers.score3=scores.q7+scores.q8+scores.q9;
+  try{
+    const res=await fetch('/api/generate-report',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({answers})});
+    const data=await res.json();
+    data.report?renderReport(data.report):renderFallback();
+  }catch(e){renderFallback();}
+}
 
-We have a full documented playbook they could follow independently from day one
-How clearly defined is your Ideal Customer Profile across your commercial team?
+function renderReport(r){
+  document.getElementById('rpt-url').textContent=answers.website+' - '+new Date().toLocaleDateString('en-GB',{month:'long',year:'numeric'});
+  document.getElementById('rpt-overview').textContent=r.companyOverview;
+  document.getElementById('rpt-transition').textContent=r.criticalTransition;
+  document.getElementById('rpt-maturity-explain').textContent=r.maturityRatingExplanation;
+  document.getElementById('rpt-takeaways').textContent=r.keyTakeaways;
+  const icp=r.icpProfile;
+  document.getElementById('rpt-icp').innerHTML=`
+    <div class="icp-card"><div class="icp-key">Account profile</div><div class="icp-val">${icp.accountProfile}</div></div>
+    <div class="icp-card"><div class="icp-key">Buyer title</div><div class="icp-val">${icp.buyerTitle}</div></div>
+    <div class="icp-card"><div class="icp-key">Trigger moment</div><div class="icp-val">${icp.triggerMoment}</div></div>
+    <div class="icp-card"><div class="icp-key">Deal complexity</div><div class="icp-val">${icp.dealComplexity}</div></div>`;
+  const stages=['Foundational','Developing','Optimised'];
+  const descs=['Core building blocks being established','Solid in some areas, gaps in others','Strong infrastructure, ready to compound'];
+  document.getElementById('rpt-maturity').innerHTML=stages.map((s,i)=>`<div class="ms${r.maturityRating===s?' active':''}"><div class="ms-name">${s}</div><div class="ms-desc">${descs[i]}</div></div>`).join('');
+  const sc=r.scores;
+  const s1=Math.round(sc.commercialFoundation*10)/10;
+  const s2=Math.round(sc.systemsCrmData*10)/10;
+  const s3=Math.round(sc.automationAiReadiness*10)/10;
+  const total=Math.round(s1+s2+s3);
+  const colors=['#00b4d8','#1D9E75','#EF9F27'];
+  document.getElementById('rpt-scores').innerHTML=[['Commercial Foundation',s1],['Systems, CRM & Data',s2],['Automation & AI Readiness',s3]].map(([lbl,score],i)=>`<div class="sc"><div class="sc-label">${lbl}</div><div class="sc-bar-bg"><div class="sc-bar-fill" style="width:${score*10}%;background:${colors[i]}"></div></div><span class="sc-num">${score}</span><span class="sc-den"> / 10</span></div>`).join('');
+  document.getElementById('rpt-total').textContent=total+' / 30';
+  const aa=r.areaAnalyses;
+  document.getElementById('rpt-analyses').innerHTML=[['Commercial Foundation',s1,aa.commercialFoundation],['Systems, CRM & Data',s2,aa.systemsCrmData],['Automation & AI Readiness',s3,aa.automationAiReadiness]].map(([name,score,body])=>`<div class="area-analysis"><div class="aa-header"><div class="aa-name">${name}</div><div class="aa-score">${score} / 10</div></div><div class="aa-body">${body}</div></div>`).join('');
+  show('screen-report');
+}
 
-It lives with the founder — the team targets based on instinct or the founder's guidance
+function renderFallback(){
+  document.getElementById('rpt-url').textContent=answers.website+' - '+new Date().toLocaleDateString('en-GB',{month:'long',year:'numeric'});
+  document.getElementById('rpt-overview').textContent='Based on your answers and website, your business is at a critical commercial inflection point - transitioning from early traction to a scalable revenue operation.';
+  document.getElementById('rpt-transition').textContent='You have built something real. The product works, you have paying customers, and you have demonstrated genuine demand for what you offer. The next stage - scaling the commercial operation, building a team that performs without the founder in every deal, and demonstrating the commercial rigour investors expect - requires a different infrastructure to the one that generated early traction.';
+  document.getElementById('rpt-maturity-explain').textContent='Your answers indicate you are in the early stages of building commercial infrastructure. The analysis below will help you identify where to focus first.';
+  document.getElementById('rpt-takeaways').textContent='The common thread across your commercial operation is that the systems, processes and data infrastructure that make a team perform independently are still being established. This is normal at your stage - and it is entirely fixable. The businesses that scale fastest are the ones that address this infrastructure gap before it becomes a constraint on growth.';
+  document.getElementById('rpt-icp').innerHTML=`
+    <div class="icp-card"><div class="icp-key">Account profile</div><div class="icp-val">B2B companies at growth stage</div></div>
+    <div class="icp-card"><div class="icp-key">Buyer title</div><div class="icp-val">Founder, CEO or senior commercial leader</div></div>
+    <div class="icp-card"><div class="icp-key">Trigger moment</div><div class="icp-val">Scaling beyond founder-led sales</div></div>
+    <div class="icp-card"><div class="icp-key">Deal complexity</div><div class="icp-val">Multi-stakeholder, consultative sales cycle</div></div>`;
+  const stages=['Foundational','Developing','Optimised'];
+  const descs=['Core building blocks being established','Solid in some areas, gaps in others','Strong infrastructure, ready to compound'];
+  document.getElementById('rpt-maturity').innerHTML=stages.map((s,i)=>`<div class="ms${i===0?' active':''}"><div class="ms-name">${s}</div><div class="ms-desc">${descs[i]}</div></div>`).join('');
+  const s1=Math.round((answers.score1/12)*10*10)/10;
+  const s2=Math.round((answers.score2/12)*10*10)/10;
+  const s3=Math.round((answers.score3/12)*10*10)/10;
+  const total=Math.round(s1+s2+s3);
+  const colors=['#00b4d8','#1D9E75','#EF9F27'];
+  document.getElementById('rpt-scores').innerHTML=[['Commercial Foundation',s1],['Systems, CRM & Data',s2],['Automation & AI Readiness',s3]].map(([lbl,score],i)=>`<div class="sc"><div class="sc-label">${lbl}</div><div class="sc-bar-bg"><div class="sc-bar-fill" style="width:${score*10}%;background:${colors[i]}"></div></div><span class="sc-num">${score}</span><span class="sc-den"> / 10</span></div>`).join('');
+  document.getElementById('rpt-total').textContent=total+' / 30';
+  document.getElementById('rpt-analyses').innerHTML=[['Commercial Foundation',s1,'Your commercial foundation reflects where most growth-stage businesses are at this point. The process, knowledge and qualification frameworks that make a team perform consistently are still being established. Getting this right is the foundation everything else is built on.'],['Systems, CRM & Data',s2,'Your data infrastructure and CRM setup have room to grow. The ability to forecast reliably, report commercial metrics with confidence, and give investors the visibility they expect all depend on getting the data layer right.'],['Automation & AI Readiness',s3,'Your commercial operation has significant automation potential that is currently untapped. Freeing your team from manual work and building the data quality needed for AI to compound your results is the next frontier.']].map(([name,score,body])=>`<div class="area-analysis"><div class="aa-header"><div class="aa-name">${name}</div><div class="aa-score">${score} / 10</div></div><div class="aa-body">${body}</div></div>`).join('');
+  show('screen-report');
+}
 
-We have a rough ICP but it's not formally defined or consistently applied
-
-Our ICP is defined but qualification varies between team members
-
-We have a precise ICP with a qualification framework the whole team applies consistently
-Where does your product knowledge and competitive positioning live?
-
-Primarily with the founder — they handle the complex conversations and objections
-
-Partially documented but the team still relies on the founder for difficult questions
-
-Mostly documented but not structured enough for a new hire to use independently
-
-Fully documented knowledge base — any team member can handle any conversation confidently
-Next: Systems & Data →
+function downloadReport(){
+  const el=document.getElementById('reportWrap');
+  const opt={margin:[10,10,10,10],filename:'VentureScale-Commercial-Infrastructure-Assessment.pdf',image:{type:'jpeg',quality:.95},html2canvas:{scale:2,backgroundColor:'#112240'},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}};
+  html2pdf().set(opt).from(el).save();
+}
+</script>
+</body>
+</html>
