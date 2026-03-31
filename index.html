@@ -547,10 +547,37 @@ function renderFallback(){
 }
 
 function downloadReport(){
-  const el=document.getElementById('reportWrap');
-  const opt={margin:[10,10,10,10],filename:'VentureScale-Commercial-Infrastructure-Assessment.pdf',image:{type:'jpeg',quality:.95},html2canvas:{scale:2,backgroundColor:'#112240'},jsPDF:{unit:'mm',format:'a4',orientation:'portrait'}};
-  html2pdf().set(opt).from(el).save();
-}
+  const el = document.getElementById('reportWrap');
+  const style = document.createElement('style');
+  style.id = 'pdf-override';
+  style.textContent = `
+    #reportWrap, #reportWrap * { color: #1a1a2e !important; background: #ffffff !important; border-color: #dddddd !important; }
+    #reportWrap .rpt-eyebrow, #reportWrap .rsec-tag, #reportWrap .icp-key, #reportWrap .rpt-url,
+    #reportWrap .sc-label, #reportWrap .total-lbl, #reportWrap .aa-score, #reportWrap .ms-desc,
+    #reportWrap .dl-bar p, #reportWrap .cta-det-k, #reportWrap .report-footer p { color: #555555 !important; }
+    #reportWrap .rpt-title, #reportWrap .aa-name, #reportWrap .ms-name, #reportWrap .icp-val,
+    #reportWrap .sc-num, #reportWrap .total-val, #reportWrap .cta-title { color: #0a1628 !important; }
+    #reportWrap .rpt-intro, #reportWrap .icp-card, #reportWrap .sc, #reportWrap .area-analysis,
+    #reportWrap .takeaways, #reportWrap .cta-block, #reportWrap .total-score { background: #f5f7fa !important; }
+    #reportWrap .ms.active { background: #e6f1fb !important; border-color: #185fa5 !important; }
+    #reportWrap .ms.active .ms-name { color: #185fa5 !important; }
+    #reportWrap .dl-bar, #reportWrap .cta-block { background: #eef7fb !important; border-color: #b5d4f4 !important; }
+    #reportWrap .btn-dl, #reportWrap .btn-audit { display: none !important; }
+    #reportWrap .report-footer a { color: #185fa5 !important; }
+  `;
+  document.head.appendChild(style);
+  const opt = {
+    margin: [12, 12, 12, 12],
+    filename: 'VentureScale-Commercial-Infrastructure-Assessment.pdf',
+    image: { type: 'jpeg', quality: 0.97 },
+    html2canvas: { scale: 2, backgroundColor: '#ffffff', useCORS: true },
+    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+  };
+  html2pdf().set(opt).from(el).save().then(() => {
+    const override = document.getElementById('pdf-override');
+    if(override) override.remove();
+  });
+}  
 </script>
 </body>
 </html>
