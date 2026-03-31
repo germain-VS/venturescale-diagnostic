@@ -12,8 +12,10 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
-.screen{display:none}
-.screen.active{display:block}
+.screen{display:none !important}
+.screen.active{display:block !important}
+#screen-questions.active{display:flex !important;flex-direction:column}
+#screen-report.active{display:block !important}
 nav{position:sticky;top:0;z-index:50;padding:18px 48px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,22,40,0.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav-logo{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--white);text-decoration:none}
 .nav-logo span{color:var(--cyan)}
